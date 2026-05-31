@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --maxw: 1200px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0F1115;
+  color: rgba(255, 255, 255, 0.65);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display), system-ui, sans-serif;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+/* Scroll reveal — elements start hidden, .is-visible reveals them */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* The angular chevron motif echoed from the logo's "R" */
+.chevron-accent {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+}
+
+/* ---------------------------------------------------------------------------
+   Subtle background textures — barely-there, brand-tinted. Always layered
+   behind content via an absolutely-positioned, pointer-events-none element.
+   --------------------------------------------------------------------------- */
+
+/* Faint dot-grid, lightly tinted with the brand red */
+.bg-dots {
+  background-image: radial-gradient(rgba(164, 22, 26, 0.07) 1px, transparent 1.6px);
+  background-size: 22px 22px;
+}
+
+/* Thin line-grid, neutral ink tint so it reads as structure, not colour */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(26, 26, 26, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(26, 26, 26, 0.035) 1px, transparent 1px);
+  background-size: 46px 46px;
+}
+
+/* Light dot-grid for use on the dark (ink) sections */
+.bg-dots-light {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1.6px);
+  background-size: 26px 26px;
+}
+
+/* Fade a texture toward its edges so it never reads as a hard, tiled block */
+.mask-fade {
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 0%, transparent 78%);
+  mask-image: radial-gradient(ellipse at center, #000 0%, transparent 78%);
+}
+
+/* ── Content Protection ── */
+
+/* Disable text selection site-wide */
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Re-enable selection only inside form inputs */
+input, textarea, select {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  user-select: text;
+}
+
+/* Disable image drag and right-click save */
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}
+
+/* Re-enable pointer events for images inside clickable elements */
+a img, button img {
+  pointer-events: auto;
+}
+
+::selection {
+  background: #a4161a;
+  color: #ffffff;
+}
+
+/* ── Animated spinning border around logo ── */
+@keyframes logo-border-spin {
+  to { transform: rotate(1turn); }
+}
+
+.logo-ring {
+  position: relative;
+  display: inline-flex;
+  padding: 2px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.logo-ring::before {
+  content: "";
+  position: absolute;
+  inset: -100%;
+  background: conic-gradient(
+    from 0deg,
+    transparent   0%,
+    #A4161A      20%,
+    #ff3b3b      40%,
+    #A4161A      60%,
+    transparent  80%,
+    transparent 100%
+  );
+  animation: logo-border-spin 3s linear infinite;
+}
+
+.logo-ring-inner {
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+}
