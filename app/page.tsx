@@ -1,7 +1,15 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Quote, Zap, Star, Check, Globe } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Quote,
+  Zap,
+  Star,
+  Check,
+  Globe,
+} from "lucide-react";
 import Reveal from "@/components/Reveal";
 import StatCounter from "@/components/StatCounter";
 import BlogCard from "@/components/BlogCard";
@@ -30,14 +38,14 @@ export default function Home() {
           1. HERO
       ───────────────────────────────────────────── */}
       <section className="relative flex min-h-screen items-center overflow-hidden bg-[#080A0E]">
-
         <div aria-hidden className="pointer-events-none absolute inset-0">
           <div className="absolute -right-32 -top-32 h-[640px] w-[640px] rounded-full bg-brand/[0.14] blur-[150px]" />
           <div className="absolute -bottom-40 -left-24 h-[440px] w-[440px] rounded-full bg-brand/[0.08] blur-[130px]" />
           <div
             className="absolute inset-0 opacity-[0.022]"
             style={{
-              backgroundImage: "radial-gradient(rgba(255,255,255,0.9) 1px, transparent 1px)",
+              backgroundImage:
+                "radial-gradient(rgba(255,255,255,0.9) 1px, transparent 1px)",
               backgroundSize: "28px 28px",
             }}
           />
@@ -52,7 +60,6 @@ export default function Home() {
         </div>
 
         <div className="relative mx-auto grid w-full max-w-container items-center gap-16 px-5 py-24 lg:grid-cols-[1.15fr_1fr] lg:px-8 lg:min-h-screen lg:py-0">
-
           {/* LEFT — Typography */}
           <Reveal>
             <span className="inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 backdrop-blur-sm">
@@ -88,7 +95,10 @@ export default function Home() {
                 className="group inline-flex items-center gap-2.5 rounded-xl bg-brand px-8 py-4 font-bold text-white shadow-[0_0_50px_rgba(164,22,26,0.45)] transition-all hover:bg-brand-dark hover:shadow-[0_0_70px_rgba(164,22,26,0.65)]"
               >
                 Start Your Project
-                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                <ArrowRight
+                  size={18}
+                  className="transition-transform group-hover:translate-x-1"
+                />
               </Link>
               <Link
                 href="/portfolio"
@@ -102,10 +112,12 @@ export default function Home() {
               {[
                 { val: "80+", label: "Projects Delivered" },
                 { val: "50+", label: "Happy Clients" },
-                { val: "3",   label: "Countries" },
+                { val: "3", label: "Countries" },
               ].map((s) => (
                 <div key={s.label}>
-                  <div className="font-display text-2xl font-extrabold text-white">{s.val}</div>
+                  <div className="font-display text-2xl font-extrabold text-white">
+                    {s.val}
+                  </div>
                   <div className="mt-0.5 text-[11px] font-semibold uppercase tracking-widest text-white/35">
                     {s.label}
                   </div>
@@ -117,7 +129,10 @@ export default function Home() {
           {/* RIGHT — CSS dashboard mockup */}
           <Reveal delay={220}>
             <div className="relative mx-auto w-full max-w-[420px] lg:mx-0">
-              <div aria-hidden className="absolute inset-0 scale-110 rounded-3xl bg-brand/[0.06] blur-3xl" />
+              <div
+                aria-hidden
+                className="absolute inset-0 scale-110 rounded-3xl bg-brand/[0.06] blur-3xl"
+              />
 
               <div className="relative rounded-3xl border border-white/[0.08] bg-white/[0.03] p-6 shadow-[0_40px_120px_rgba(0,0,0,0.75)] backdrop-blur-xl">
                 <div className="mb-6 flex items-center gap-1.5">
@@ -131,11 +146,26 @@ export default function Home() {
 
                 <div className="mb-5 grid grid-cols-3 gap-3">
                   {[
-                    { label: "Active",  val: "12",  cls: "bg-brand/15 text-brand" },
-                    { label: "Done",    val: "68",  cls: "bg-green-500/10 text-green-400" },
-                    { label: "Clients", val: "50+", cls: "bg-blue-500/10 text-blue-400" },
+                    {
+                      label: "Active",
+                      val: "12",
+                      cls: "bg-brand/15 text-brand",
+                    },
+                    {
+                      label: "Done",
+                      val: "68",
+                      cls: "bg-green-500/10 text-green-400",
+                    },
+                    {
+                      label: "Clients",
+                      val: "50+",
+                      cls: "bg-blue-500/10 text-blue-400",
+                    },
                   ].map((item) => (
-                    <div key={item.label} className={`rounded-xl p-3 ${item.cls}`}>
+                    <div
+                      key={item.label}
+                      className={`rounded-xl p-3 ${item.cls}`}
+                    >
                       <div className="text-xl font-extrabold">{item.val}</div>
                       <div className="mt-0.5 text-[9px] font-bold uppercase tracking-wider opacity-60">
                         {item.label}
@@ -146,17 +176,24 @@ export default function Home() {
 
                 <div className="mb-5 space-y-3">
                   {[
-                    { label: "Web Development",   pct: 92 },
+                    { label: "Web Development", pct: 92 },
                     { label: "Digital Marketing", pct: 87 },
-                    { label: "CRM Solutions",     pct: 78 },
+                    { label: "CRM Solutions", pct: 78 },
                   ].map((bar) => (
                     <div key={bar.label}>
                       <div className="mb-1 flex justify-between">
-                        <span className="text-xs text-white/40">{bar.label}</span>
-                        <span className="text-xs font-bold text-white">{bar.pct}%</span>
+                        <span className="text-xs text-white/40">
+                          {bar.label}
+                        </span>
+                        <span className="text-xs font-bold text-white">
+                          {bar.pct}%
+                        </span>
                       </div>
                       <div className="h-1.5 overflow-hidden rounded-full bg-white/[0.06]">
-                        <div className="h-full rounded-full bg-brand" style={{ width: `${bar.pct}%` }} />
+                        <div
+                          className="h-full rounded-full bg-brand"
+                          style={{ width: `${bar.pct}%` }}
+                        />
                       </div>
                     </div>
                   ))}
@@ -164,7 +201,10 @@ export default function Home() {
 
                 <div className="flex flex-wrap gap-2">
                   {["Next.js", "React", "Laravel", "AI SEO", "CRM"].map((t) => (
-                    <span key={t} className="rounded-lg border border-white/[0.08] bg-white/[0.04] px-3 py-1.5 text-xs font-semibold text-white/50">
+                    <span
+                      key={t}
+                      className="rounded-lg border border-white/[0.08] bg-white/[0.04] px-3 py-1.5 text-xs font-semibold text-white/50"
+                    >
                       {t}
                     </span>
                   ))}
@@ -173,15 +213,18 @@ export default function Home() {
 
               <div className="absolute -right-3 -top-3 flex items-center gap-1.5 rounded-2xl border border-white/10 bg-[#0F1115] px-3 py-2 shadow-xl">
                 <Zap size={13} className="text-brand" />
-                <span className="text-[11px] font-bold text-white">Fast Delivery</span>
+                <span className="text-[11px] font-bold text-white">
+                  Fast Delivery
+                </span>
               </div>
               <div className="absolute -bottom-3 -left-3 flex items-center gap-1.5 rounded-2xl border border-white/10 bg-[#0F1115] px-3 py-2 shadow-xl">
                 <Star size={13} className="text-yellow-400" />
-                <span className="text-[11px] font-bold text-white">5-Star Quality</span>
+                <span className="text-[11px] font-bold text-white">
+                  5-Star Quality
+                </span>
               </div>
             </div>
           </Reveal>
-
         </div>
       </section>
 
@@ -192,7 +235,10 @@ export default function Home() {
         <div className="flex overflow-hidden">
           <div className="flex shrink-0 animate-marquee">
             {[...techStack, ...techStack].map((t, i) => (
-              <span key={i} className="whitespace-nowrap px-7 py-1.5 font-display text-xs font-bold uppercase tracking-[0.25em] text-white/20">
+              <span
+                key={i}
+                className="whitespace-nowrap px-7 py-1.5 font-display text-xs font-bold uppercase tracking-[0.25em] text-white/20"
+              >
                 {t}
                 <span className="ml-7 text-white/10">·</span>
               </span>
@@ -207,21 +253,28 @@ export default function Home() {
       <section className="border-b border-white/[0.06] bg-[#080A0E]">
         <div className="mx-auto max-w-container px-5 py-20 lg:px-8 lg:py-28">
           <div className="grid gap-16 lg:grid-cols-[280px_1fr] lg:gap-20">
-
             {/* Left — sticky label + portrait */}
             <Reveal>
               <div className="lg:sticky lg:top-28 lg:self-start">
-                <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand">What We Do</p>
-                <h2 className="mt-3 text-4xl font-extrabold leading-tight text-white">Our Core Services</h2>
-                <p className="mt-4 text-sm leading-relaxed text-white/40">
-                  End-to-end technology solutions — from first idea to final product, and everything in between.
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand">
+                  What We Do
                 </p>
-                <Link href="/contact" className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-brand hover:underline">
+                <h2 className="mt-3 text-4xl font-extrabold leading-tight text-white">
+                  Our Core Services
+                </h2>
+                <p className="mt-4 text-sm leading-relaxed text-white/40">
+                  End-to-end technology solutions — from first idea to final
+                  product, and everything in between.
+                </p>
+                <Link
+                  href="/contact"
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-brand hover:underline"
+                >
                   Work with us <ArrowRight size={14} />
                 </Link>
 
                 {/* Services portrait */}
-                <div className="relative mt-8 hidden lg:block">
+                {/* <div className="relative mt-8 hidden lg:block">
                   <div className="group h-64 w-64 overflow-hidden rounded-full ring-4 ring-brand/20 ring-offset-4 ring-offset-[#080A0E]">
                     <Image
                       src="/services-portrait.png"
@@ -231,8 +284,11 @@ export default function Home() {
                       className="h-full w-full scale-110 object-cover object-top transition-transform duration-500 group-hover:scale-125"
                     />
                   </div>
-                  <div aria-hidden className="absolute inset-0 -z-10 rounded-full bg-brand/10 blur-2xl scale-125" />
-                </div>
+                  <div
+                    aria-hidden
+                    className="absolute inset-0 -z-10 rounded-full bg-brand/10 blur-2xl scale-125"
+                  />
+                </div> */}
               </div>
             </Reveal>
 
@@ -254,14 +310,18 @@ export default function Home() {
                           {s.title}
                         </h3>
                       </div>
-                      <p className="mt-1.5 max-w-lg text-sm text-white/40">{s.short}</p>
+                      <p className="mt-1.5 max-w-lg text-sm text-white/40">
+                        {s.short}
+                      </p>
                     </div>
-                    <ArrowUpRight size={20} className="shrink-0 text-white/15 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand" />
+                    <ArrowUpRight
+                      size={20}
+                      className="shrink-0 text-white/15 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand"
+                    />
                   </Link>
                 </Reveal>
               ))}
             </div>
-
           </div>
         </div>
       </section>
@@ -271,11 +331,9 @@ export default function Home() {
       ───────────────────────────────────────────── */}
       <section className="border-b border-white/[0.06] bg-[#0C0E13]">
         <div className="mx-auto grid max-w-container items-center gap-12 px-5 py-20 lg:grid-cols-2 lg:px-8 lg:py-28">
-
           {/* LEFT — overlapping photos */}
           <Reveal>
             <div className="relative mx-auto w-full max-w-md pb-10 lg:mx-0 lg:pb-12">
-
               {/* Larger photo */}
               <div className="overflow-hidden rounded-2xl shadow-[0_24px_60px_rgba(0,0,0,0.6)]">
                 <Image
@@ -304,8 +362,12 @@ export default function Home() {
                   <Globe size={18} className="text-white" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-wider text-white/70">Global Experience</p>
-                  <p className="text-sm font-bold text-white">USA, India &amp; Nepal</p>
+                  <p className="text-xs font-bold uppercase tracking-wider text-white/70">
+                    Global Experience
+                  </p>
+                  <p className="text-sm font-bold text-white">
+                    USA, India &amp; Nepal
+                  </p>
                 </div>
               </div>
             </div>
@@ -337,7 +399,9 @@ export default function Home() {
                   <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand text-white">
                     <Check size={11} strokeWidth={3} />
                   </span>
-                  <span className="text-sm font-medium text-white/70">{item}</span>
+                  <span className="text-sm font-medium text-white/70">
+                    {item}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -349,7 +413,6 @@ export default function Home() {
               Discover More <ArrowRight size={16} />
             </Link>
           </Reveal>
-
         </div>
       </section>
 
@@ -358,17 +421,19 @@ export default function Home() {
       ───────────────────────────────────────────── */}
       <section className="border-b border-white/[0.06] bg-[#080A0E]">
         <div className="mx-auto max-w-container px-5 py-20 lg:px-8 lg:py-28">
-
           <Reveal>
             <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand">What We Build</p>
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand">
+                  What We Build
+                </p>
                 <h2 className="mt-3 text-4xl font-extrabold leading-tight text-white sm:text-5xl">
                   Industry Solutions
                 </h2>
               </div>
               <p className="max-w-sm text-sm text-white/40">
-                From education to hospitality — real software for real industries, built to last.
+                From education to hospitality — real software for real
+                industries, built to last.
               </p>
             </div>
           </Reveal>
@@ -378,15 +443,21 @@ export default function Home() {
               const featured = i === 0 || i === 4;
               return (
                 <Reveal key={s.title} delay={i * 55}>
-                  <div className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border p-6 transition-all hover:-translate-y-0.5 ${
-                    featured
-                      ? "border-brand/25 bg-gradient-to-br from-brand/[0.10] to-brand/[0.03] hover:border-brand/50 hover:shadow-[0_20px_60px_-15px_rgba(164,22,26,0.3)]"
-                      : "border-white/[0.06] bg-white/[0.025] hover:border-brand/20 hover:bg-white/[0.04] hover:shadow-[0_16px_50px_-15px_rgba(0,0,0,0.4)]"
-                  }`}>
+                  <div
+                    className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border p-6 transition-all hover:-translate-y-0.5 ${
+                      featured
+                        ? "border-brand/25 bg-gradient-to-br from-brand/[0.10] to-brand/[0.03] hover:border-brand/50 hover:shadow-[0_20px_60px_-15px_rgba(164,22,26,0.3)]"
+                        : "border-white/[0.06] bg-white/[0.025] hover:border-brand/20 hover:bg-white/[0.04] hover:shadow-[0_16px_50px_-15px_rgba(0,0,0,0.4)]"
+                    }`}
+                  >
                     <div className="flex items-start justify-between gap-2">
-                      <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl transition-colors ${
-                        featured ? "bg-brand text-white" : "bg-brand/10 text-brand group-hover:bg-brand group-hover:text-white"
-                      }`}>
+                      <span
+                        className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl transition-colors ${
+                          featured
+                            ? "bg-brand text-white"
+                            : "bg-brand/10 text-brand group-hover:bg-brand group-hover:text-white"
+                        }`}
+                      >
                         <s.icon size={23} />
                       </span>
                       <span className="rounded-full border border-white/[0.08] bg-white/[0.04] px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white/35">
@@ -394,14 +465,19 @@ export default function Home() {
                       </span>
                     </div>
                     <h3 className="mt-5 font-bold text-white">{s.title}</h3>
-                    <p className="mt-2 flex-1 text-sm leading-relaxed text-white/45">{s.desc}</p>
+                    <p className="mt-2 flex-1 text-sm leading-relaxed text-white/45">
+                      {s.desc}
+                    </p>
                     {featured && (
                       <div className="mt-5 inline-flex items-center gap-1.5 text-xs font-bold text-brand">
                         Learn more <ArrowRight size={12} />
                       </div>
                     )}
                     {featured && (
-                      <div aria-hidden className="absolute -right-8 -top-8 h-36 w-36 rounded-full bg-brand/15 blur-3xl" />
+                      <div
+                        aria-hidden
+                        className="absolute -right-8 -top-8 h-36 w-36 rounded-full bg-brand/15 blur-3xl"
+                      />
                     )}
                   </div>
                 </Reveal>
@@ -411,14 +487,18 @@ export default function Home() {
             <Reveal delay={480}>
               <div className="group flex h-full flex-col items-center justify-center rounded-2xl border border-dashed border-white/12 p-6 text-center transition-all hover:border-brand/35 hover:bg-brand/[0.04]">
                 <p className="font-bold text-white">Have a custom idea?</p>
-                <p className="mt-1.5 text-sm text-white/40">We build solutions tailored exactly to your needs.</p>
-                <Link href="/contact" className="mt-5 inline-flex items-center gap-2 rounded-xl bg-brand px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-brand-dark">
+                <p className="mt-1.5 text-sm text-white/40">
+                  We build solutions tailored exactly to your needs.
+                </p>
+                <Link
+                  href="/contact"
+                  className="mt-5 inline-flex items-center gap-2 rounded-xl bg-brand px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-brand-dark"
+                >
                   Tell Us <ArrowRight size={14} />
                 </Link>
               </div>
             </Reveal>
           </div>
-
         </div>
       </section>
 
@@ -437,7 +517,12 @@ export default function Home() {
         />
         <div className="relative mx-auto grid max-w-container grid-cols-2 gap-y-12 px-5 py-16 lg:grid-cols-3 lg:px-8">
           {stats.map((s) => (
-            <StatCounter key={s.label} value={s.value} suffix={s.suffix} label={s.label} />
+            <StatCounter
+              key={s.label}
+              value={s.value}
+              suffix={s.suffix}
+              label={s.label}
+            />
           ))}
         </div>
       </section>
@@ -448,18 +533,19 @@ export default function Home() {
       <section className="border-b border-white/[0.06] bg-[#0C0E13]">
         <div className="mx-auto max-w-container px-5 py-20 lg:px-8 lg:py-28">
           <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
-
             {/* LEFT — copy + feature list */}
             <Reveal>
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand">Why Choose Us</p>
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand">
+                Why Choose Us
+              </p>
               <h2 className="mt-4 text-4xl font-extrabold leading-[1.05] text-white sm:text-5xl">
                 We don&apos;t just deliver code.
                 <br />
                 <span className="text-brand">We deliver results.</span>
               </h2>
               <p className="mt-5 max-w-md text-lg text-white/45">
-                A dedicated in-house team that ships on time, communicates clearly,
-                and sticks around long after launch.
+                A dedicated in-house team that ships on time, communicates
+                clearly, and sticks around long after launch.
               </p>
 
               <ul className="mt-8 space-y-5">
@@ -483,16 +569,24 @@ export default function Home() {
             <Reveal delay={160}>
               <div className="relative mx-auto w-full max-w-lg lg:mx-0">
                 {/* Decorative glows */}
-                <div aria-hidden className="absolute -right-10 -top-10 h-56 w-56 rounded-full bg-brand/10 blur-3xl" />
-                <div aria-hidden className="absolute -bottom-8 -left-8 h-40 w-40 rounded-full bg-brand/10 blur-2xl" />
+                <div
+                  aria-hidden
+                  className="absolute -right-10 -top-10 h-56 w-56 rounded-full bg-brand/10 blur-3xl"
+                />
+                <div
+                  aria-hidden
+                  className="absolute -bottom-8 -left-8 h-40 w-40 rounded-full bg-brand/10 blur-2xl"
+                />
 
                 {/* Dot accent */}
                 <div
                   aria-hidden
                   className="absolute -bottom-2 -left-2 h-28 w-28 bg-dots opacity-40"
                   style={{
-                    maskImage: "radial-gradient(ellipse at bottom left, #000 20%, transparent 80%)",
-                    WebkitMaskImage: "radial-gradient(ellipse at bottom left, #000 20%, transparent 80%)",
+                    maskImage:
+                      "radial-gradient(ellipse at bottom left, #000 20%, transparent 80%)",
+                    WebkitMaskImage:
+                      "radial-gradient(ellipse at bottom left, #000 20%, transparent 80%)",
                   }}
                 />
 
@@ -509,7 +603,6 @@ export default function Home() {
                 </div>
               </div>
             </Reveal>
-
           </div>
         </div>
       </section>
@@ -519,11 +612,12 @@ export default function Home() {
       ───────────────────────────────────────────── */}
       <section className="border-b border-white/[0.06] bg-[#080A0E]">
         <div className="mx-auto grid max-w-container items-start gap-12 px-5 py-20 lg:grid-cols-2 lg:px-8 lg:py-28">
-
           {/* LEFT — steps */}
           <div>
             <Reveal>
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand">Our Process</p>
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand">
+                Our Process
+              </p>
               <h2 className="mt-3 text-4xl font-extrabold leading-tight text-white sm:text-5xl">
                 How we turn ideas into reality
               </h2>
@@ -535,9 +629,21 @@ export default function Home() {
 
             <div className="mt-10 space-y-4">
               {[
-                { num: "01", title: "Understand Your Needs", text: "We start by fully understanding your business goals to ensure the right solution." },
-                { num: "02", title: "Design & Develop",      text: "We craft and build tailor-made software aligned with your specific targets." },
-                { num: "03", title: "Launch & Support",      text: "We launch smoothly and provide ongoing support for continual improvement." },
+                {
+                  num: "01",
+                  title: "Understand Your Needs",
+                  text: "We start by fully understanding your business goals to ensure the right solution.",
+                },
+                {
+                  num: "02",
+                  title: "Design & Develop",
+                  text: "We craft and build tailor-made software aligned with your specific targets.",
+                },
+                {
+                  num: "03",
+                  title: "Launch & Support",
+                  text: "We launch smoothly and provide ongoing support for continual improvement.",
+                },
               ].map((s, i) => (
                 <Reveal key={s.num} delay={i * 110}>
                   <div className="flex items-start gap-5 rounded-2xl border border-white/[0.07] bg-white/[0.03] p-5">
@@ -557,7 +663,6 @@ export default function Home() {
           {/* RIGHT — photos */}
           <Reveal delay={180}>
             <div className="flex flex-col gap-4">
-
               {/* Large photo */}
               <div className="overflow-hidden rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
                 <Image
@@ -581,14 +686,16 @@ export default function Home() {
                   />
                 </div>
                 <div className="flex flex-col justify-center rounded-2xl bg-brand p-5 shadow-[0_0_30px_rgba(164,22,26,0.35)]">
-                  <p className="text-lg font-extrabold leading-snug text-white">Global Expertise</p>
-                  <p className="mt-2 text-sm text-white/80">Founders from the USA, India &amp; Nepal</p>
+                  <p className="text-lg font-extrabold leading-snug text-white">
+                    Global Expertise
+                  </p>
+                  <p className="mt-2 text-sm text-white/80">
+                    Founders from the USA, India &amp; Nepal
+                  </p>
                 </div>
               </div>
-
             </div>
           </Reveal>
-
         </div>
       </section>
 
@@ -597,14 +704,20 @@ export default function Home() {
       ───────────────────────────────────────────── */}
       <section className="border-b border-white/[0.06] bg-[#0C0E13]">
         <div className="mx-auto max-w-container px-5 py-20 lg:px-8 lg:py-24">
-
           <Reveal>
             <div className="mb-12 flex flex-wrap items-end justify-between gap-4">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand">Our Work</p>
-                <h2 className="mt-3 text-4xl font-extrabold text-white">Recent Projects</h2>
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand">
+                  Our Work
+                </p>
+                <h2 className="mt-3 text-4xl font-extrabold text-white">
+                  Recent Projects
+                </h2>
               </div>
-              <Link href="/portfolio" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand hover:underline">
+              <Link
+                href="/portfolio"
+                className="inline-flex items-center gap-1.5 text-sm font-bold text-brand hover:underline"
+              >
                 View all projects <ArrowRight size={14} />
               </Link>
             </div>
@@ -636,20 +749,25 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
-
         </div>
       </section>
 
       {/* ─────────────────────────────────────────────
           10. TESTIMONIALS
       ───────────────────────────────────────────── */}
+      {/* ─────────────────────────────────────────────
+          10. TESTIMONIALS
+      ───────────────────────────────────────────── */}
       <section className="border-b border-white/[0.06] bg-[#080A0E]">
         <div className="mx-auto max-w-container px-5 py-20 lg:px-8 lg:py-24">
-
           <Reveal>
             <div className="mb-12">
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand">Testimonials</p>
-              <h2 className="mt-3 text-4xl font-extrabold text-white">Trusted by our clients</h2>
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand">
+                Testimonials
+              </p>
+              <h2 className="mt-3 text-4xl font-extrabold text-white">
+                Trusted by our clients
+              </h2>
             </div>
           </Reveal>
 
@@ -666,7 +784,9 @@ export default function Home() {
                       {t.name.charAt(0)}
                     </div>
                     <div>
-                      <div className="text-sm font-bold text-white">{t.name}</div>
+                      <div className="text-sm font-bold text-white">
+                        {t.name}
+                      </div>
                       <div className="text-xs text-white/30">{t.role}</div>
                     </div>
                   </figcaption>
@@ -674,7 +794,6 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
-
         </div>
       </section>
 
@@ -688,14 +807,20 @@ export default function Home() {
       ───────────────────────────────────────────── */}
       <section className="border-b border-white/[0.06] bg-[#080A0E]">
         <div className="mx-auto max-w-container px-5 py-20 lg:px-8 lg:py-24">
-
           <Reveal>
             <div className="mb-12 flex flex-wrap items-end justify-between gap-4">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand">Blog</p>
-                <h2 className="mt-3 text-4xl font-extrabold text-white">Exploring Technology</h2>
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-brand">
+                  Blog
+                </p>
+                <h2 className="mt-3 text-4xl font-extrabold text-white">
+                  Exploring Technology
+                </h2>
               </div>
-              <Link href="/blog" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand hover:underline">
+              <Link
+                href="/blog"
+                className="inline-flex items-center gap-1.5 text-sm font-bold text-brand hover:underline"
+              >
                 All articles <ArrowRight size={14} />
               </Link>
             </div>
@@ -708,7 +833,6 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
-
         </div>
       </section>
 
@@ -716,24 +840,33 @@ export default function Home() {
           13. CTA — Dramatic full-section
       ───────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-[#080A0E]">
-        <div aria-hidden className="pointer-events-none absolute left-1/2 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand/[0.12] blur-[130px]" />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute left-1/2 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand/[0.12] blur-[130px]"
+        />
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 opacity-[0.018]"
           style={{
-            backgroundImage: "radial-gradient(rgba(255,255,255,0.9) 1px, transparent 1px)",
+            backgroundImage:
+              "radial-gradient(rgba(255,255,255,0.9) 1px, transparent 1px)",
             backgroundSize: "28px 28px",
           }}
         />
 
         <div className="relative mx-auto max-w-container px-5 py-32 text-center lg:px-8 lg:py-40">
           <Reveal>
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-brand">Get Started</p>
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-brand">
+              Get Started
+            </p>
             <h2 className="mx-auto mt-5 max-w-3xl font-display text-5xl font-black leading-[1.02] text-white sm:text-6xl lg:text-7xl">
               Ready to build
               <br />
               something{" "}
-              <span className="text-brand" style={{ textShadow: "0 0 80px rgba(164,22,26,0.5)" }}>
+              <span
+                className="text-brand"
+                style={{ textShadow: "0 0 80px rgba(164,22,26,0.5)" }}
+              >
                 great?
               </span>
             </h2>
@@ -748,7 +881,10 @@ export default function Home() {
                 className="group inline-flex items-center gap-2.5 rounded-xl bg-brand px-10 py-4 font-bold text-white shadow-[0_0_70px_rgba(164,22,26,0.5)] transition-all hover:bg-brand-dark hover:shadow-[0_0_100px_rgba(164,22,26,0.7)]"
               >
                 Get Free Consultation
-                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                <ArrowRight
+                  size={18}
+                  className="transition-transform group-hover:translate-x-1"
+                />
               </Link>
               <Link
                 href="/portfolio"
