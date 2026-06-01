@@ -66,9 +66,18 @@ export const services: Service[] = [
       "Cloud deployment & maintenance",
     ],
     benefits: [
-      { title: "Built to scale", text: "Architecture that grows with your users without slowing down." },
-      { title: "Mobile-first", text: "Every app looks and works great on phones, tablets, and desktops." },
-      { title: "Secure by default", text: "Best practices baked in — from authentication to data handling." },
+      {
+        title: "Built to scale",
+        text: "Architecture that grows with your users without slowing down.",
+      },
+      {
+        title: "Mobile-first",
+        text: "Every app looks and works great on phones, tablets, and desktops.",
+      },
+      {
+        title: "Secure by default",
+        text: "Best practices baked in — from authentication to data handling.",
+      },
     ],
   },
   {
@@ -87,9 +96,18 @@ export const services: Service[] = [
       "Legacy system migration & modernization",
     ],
     benefits: [
-      { title: "Tailored to you", text: "Software shaped around your exact processes and goals." },
-      { title: "Automate the boring", text: "Cut manual work so your team focuses on what matters." },
-      { title: "Reliable support", text: "Ongoing maintenance and updates after launch." },
+      {
+        title: "Tailored to you",
+        text: "Software shaped around your exact processes and goals.",
+      },
+      {
+        title: "Automate the boring",
+        text: "Cut manual work so your team focuses on what matters.",
+      },
+      {
+        title: "Reliable support",
+        text: "Ongoing maintenance and updates after launch.",
+      },
     ],
   },
   {
@@ -108,9 +126,18 @@ export const services: Service[] = [
       "Multi-user roles & permissions",
     ],
     benefits: [
-      { title: "Never lose a lead", text: "Track every contact and follow-up in one organized place." },
-      { title: "Automate follow-ups", text: "Let the system nudge customers while you focus on closing." },
-      { title: "See what works", text: "Clear analytics on your sales and customer behavior." },
+      {
+        title: "Never lose a lead",
+        text: "Track every contact and follow-up in one organized place.",
+      },
+      {
+        title: "Automate follow-ups",
+        text: "Let the system nudge customers while you focus on closing.",
+      },
+      {
+        title: "See what works",
+        text: "Clear analytics on your sales and customer behavior.",
+      },
     ],
   },
   {
@@ -129,19 +156,45 @@ export const services: Service[] = [
       "Local SEO for Nepal + international markets",
     ],
     benefits: [
-      { title: "Get found", text: "Rank higher and reach customers searching for you." },
-      { title: "Measurable results", text: "Clear reporting on what every rupee is doing." },
-      { title: "Local + global", text: "Strategies tuned for Nepal and international markets." },
+      {
+        title: "Get found",
+        text: "Rank higher and reach customers searching for you.",
+      },
+      {
+        title: "Measurable results",
+        text: "Clear reporting on what every rupee is doing.",
+      },
+      {
+        title: "Local + global",
+        text: "Strategies tuned for Nepal and international markets.",
+      },
     ],
   },
 ];
 
-export const whyChooseUs: { icon: LucideIcon; title: string; text: string }[] = [
-  { icon: Rocket, title: "Dedicated In-House Team", text: "Experienced developers and designers working together, not outsourced." },
-  { icon: ShieldCheck, title: "Quality You Can Trust", text: "Clean code, thorough testing, and a focus on long-term reliability." },
-  { icon: Clock, title: "On-Time Delivery", text: "Clear timelines and honest communication at every milestone." },
-  { icon: HeartHandshake, title: "Real Support", text: "We stick around after launch with maintenance and updates." },
-];
+export const whyChooseUs: { icon: LucideIcon; title: string; text: string }[] =
+  [
+    {
+      icon: Rocket,
+      title: "Dedicated In-House Team",
+      text: "Experienced developers and designers working together, not outsourced.",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Quality You Can Trust",
+      text: "Clean code, thorough testing, and a focus on long-term reliability.",
+    },
+    {
+      icon: Clock,
+      title: "On-Time Delivery",
+      text: "Clear timelines and honest communication at every milestone.",
+    },
+    {
+      icon: HeartHandshake,
+      title: "Real Support",
+      text: "We stick around after launch with maintenance and updates.",
+    },
+  ];
 
 export const stats = [
   { value: 80, suffix: "+", label: "Projects Delivered" },
@@ -150,35 +203,67 @@ export const stats = [
 ];
 
 export const process = [
-  { step: "01", title: "Discovery", text: "We learn your goals, users, and challenges." },
-  { step: "02", title: "Planning", text: "A clear roadmap, scope, and timeline." },
-  { step: "03", title: "Design", text: "Wireframes and UI that match your brand." },
-  { step: "04", title: "Development", text: "We build in clean, tested iterations." },
+  {
+    step: "01",
+    title: "Discovery",
+    text: "We learn your goals, users, and challenges.",
+  },
+  {
+    step: "02",
+    title: "Planning",
+    text: "A clear roadmap, scope, and timeline.",
+  },
+  {
+    step: "03",
+    title: "Design",
+    text: "Wireframes and UI that match your brand.",
+  },
+  {
+    step: "04",
+    title: "Development",
+    text: "We build in clean, tested iterations.",
+  },
   { step: "05", title: "Launch", text: "We ship, monitor, and fine-tune." },
-  { step: "06", title: "Support", text: "Ongoing maintenance and improvements." },
+  {
+    step: "06",
+    title: "Support",
+    text: "Ongoing maintenance and improvements.",
+  },
 ];
 
 export const testimonials = [
   {
-    quote: "Rahu Doom delivered our platform ahead of schedule and the quality exceeded our expectations. A team we genuinely trust.",
-    name: "Client Name",
-    role: "CEO, Company A",
+    quote:
+      "Rahu Doom delivered our platform ahead of schedule and the quality exceeded our expectations. A team we genuinely trust.",
+    name: "Nitesh Aggarwal",
+    role: "CEO, Digital Solution",
   },
   {
-    quote: "Their CRM completely changed how we handle leads. Follow-ups happen automatically and nothing slips through anymore.",
-    name: "Client Name",
-    role: "Sales Head, Company B",
+    quote:
+      "Their CRM completely changed how we handle leads. Follow-ups happen automatically and nothing slips through anymore.",
+    name: "Sagar Poudel",
+    role: "Sales Head, Food and Beverages",
   },
   {
-    quote: "Professional, responsive, and genuinely invested in our success. The digital marketing results speak for themselves.",
-    name: "Client Name",
-    role: "Founder, Company C",
+    quote:
+      "Professional, responsive, and genuinely invested in our success. The digital marketing results speak for themselves.",
+    name: "Jr William",
+    role: "Founder, Fintech US",
   },
 ];
 
 export const techStack = [
-  "React", "Next.js", "Node.js", "TypeScript", "Laravel",
-  "Python", "Flutter", "PostgreSQL", "AWS", "Docker",
+  "React",
+  "Next.js",
+  "Java",
+  "Node.js",
+  "TypeScript",
+  "Laravel",
+  "Python",
+  "Flutter",
+  "PostgreSQL",
+  "AWS",
+  "Docker",
 ];
 
 export type BlogPost = {
@@ -199,22 +284,26 @@ export const blogPosts: BlogPost[] = [
     image: "/Data-Center.png",
     day: "01",
     month: "Jun",
-    title: "Nepal's Data Should Stay in Nepal: The Case for a Local Data Center",
+    title:
+      "Nepal's Data Should Stay in Nepal: The Case for a Local Data Center",
     comments: 11,
     category: "Infrastructure",
     readTime: "8 min read",
-    excerpt: "Nepal's digital data is hosted on servers in India, Singapore, and the US. A 100,000 TB data center in Kathmandu could change everything — for sovereignty, speed, and the economy.",
+    excerpt:
+      "Nepal's digital data is hosted on servers in India, Singapore, and the US. A 100,000 TB data center in Kathmandu could change everything — for sovereignty, speed, and the economy.",
   },
   {
     slug: "shikzya-education-management-system",
     image: "/ShikZya.png",
     day: "31",
     month: "May",
-    title: "Introducing ShikZya: Nepal's All-in-One Education Management System",
+    title:
+      "Introducing ShikZya: Nepal's All-in-One Education Management System",
     comments: 0,
     category: "Product Launch",
     readTime: "7 min read",
-    excerpt: "ShikZya is coming — a fully integrated EMS built for Nepal's schools and colleges. From student enrollment to parent portals, fee management to result cards, ShikZya handles it all under one roof.",
+    excerpt:
+      "ShikZya is coming — a fully integrated EMS built for Nepal's schools and colleges. From student enrollment to parent portals, fee management to result cards, ShikZya handles it all under one roof.",
   },
   {
     slug: "global-seo-advanced-tags",
@@ -225,18 +314,21 @@ export const blogPosts: BlogPost[] = [
     comments: 9,
     category: "SEO",
     readTime: "8 min read",
-    excerpt: "Local SEO gets you found in your city. Global SEO gets you found everywhere. Advanced tags — hreflang, schema, Open Graph, canonical — are what separate the websites that rank from the ones that don't.",
+    excerpt:
+      "Local SEO gets you found in your city. Global SEO gets you found everywhere. Advanced tags — hreflang, schema, Open Graph, canonical — are what separate the websites that rank from the ones that don't.",
   },
   {
     slug: "why-team-collaboration-matters",
     image: "/blog-3.png",
     day: "26",
     month: "May",
-    title: "Why Team Collaboration is the Secret Weapon of Successful Tech Companies",
+    title:
+      "Why Team Collaboration is the Secret Weapon of Successful Tech Companies",
     comments: 6,
     category: "Team",
     readTime: "6 min read",
-    excerpt: "Great software isn't built by lone geniuses — it's built by teams that communicate well, trust each other, and move together. Here's why collaboration is the most underrated competitive advantage.",
+    excerpt:
+      "Great software isn't built by lone geniuses — it's built by teams that communicate well, trust each other, and move together. Here's why collaboration is the most underrated competitive advantage.",
   },
   {
     slug: "restaurant-erp-solutions",
@@ -247,18 +339,21 @@ export const blogPosts: BlogPost[] = [
     comments: 7,
     category: "Software",
     readTime: "7 min read",
-    excerpt: "Food waste, billing errors, staff scheduling chaos — restaurants face the same problems daily. A custom ERP system eliminates them all in one go.",
+    excerpt:
+      "Food waste, billing errors, staff scheduling chaos — restaurants face the same problems daily. A custom ERP system eliminates them all in one go.",
   },
   {
     slug: "modernizing-education-technology",
     image: "/blog-9.png",
     day: "05",
     month: "May",
-    title: "Modernizing Education: How Technology is Transforming Schools in Nepal",
+    title:
+      "Modernizing Education: How Technology is Transforming Schools in Nepal",
     comments: 8,
     category: "EdTech",
     readTime: "6 min read",
-    excerpt: "Attendance registers, manual fee receipts, and paper report cards — Nepal's schools deserve better. Here's how modern EMS platforms are changing that.",
+    excerpt:
+      "Attendance registers, manual fee receipts, and paper report cards — Nepal's schools deserve better. Here's how modern EMS platforms are changing that.",
   },
   {
     slug: "how-local-seo-works",
@@ -269,7 +364,8 @@ export const blogPosts: BlogPost[] = [
     comments: 5,
     category: "SEO",
     readTime: "7 min read",
-    excerpt: "When someone in Kathmandu searches 'best restaurant near me' — will your business show up? Local SEO decides that. Here's how it works.",
+    excerpt:
+      "When someone in Kathmandu searches 'best restaurant near me' — will your business show up? Local SEO decides that. Here's how it works.",
   },
   {
     slug: "why-digital-marketing-matters",
@@ -280,7 +376,8 @@ export const blogPosts: BlogPost[] = [
     comments: 4,
     category: "Marketing",
     readTime: "6 min read",
-    excerpt: "Your customers are online — your marketing should be too. Here's why digital marketing is no longer optional for businesses in Nepal and beyond.",
+    excerpt:
+      "Your customers are online — your marketing should be too. Here's why digital marketing is no longer optional for businesses in Nepal and beyond.",
   },
   {
     slug: "pioneering-contactless-payment",
@@ -291,7 +388,8 @@ export const blogPosts: BlogPost[] = [
     comments: 6,
     category: "Fintech",
     readTime: "5 min read",
-    excerpt: "From QR codes to NFC — contactless payments are reshaping how businesses in Nepal collect money and how customers expect to pay.",
+    excerpt:
+      "From QR codes to NFC — contactless payments are reshaping how businesses in Nepal collect money and how customers expect to pay.",
   },
   {
     slug: "ux-ui-designing-future-web",
@@ -302,7 +400,8 @@ export const blogPosts: BlogPost[] = [
     comments: 3,
     category: "Design",
     readTime: "5 min read",
-    excerpt: "Good design is invisible — great design converts. Here's how thoughtful UX/UI decisions turn visitors into customers.",
+    excerpt:
+      "Good design is invisible — great design converts. Here's how thoughtful UX/UI decisions turn visitors into customers.",
   },
   {
     slug: "software-development-agility",
@@ -313,7 +412,8 @@ export const blogPosts: BlogPost[] = [
     comments: 2,
     category: "Software",
     readTime: "4 min read",
-    excerpt: "Agile isn't just a buzzword — it's how modern software teams ship faster, adapt quickly, and deliver real value without getting lost in endless planning cycles.",
+    excerpt:
+      "Agile isn't just a buzzword — it's how modern software teams ship faster, adapt quickly, and deliver real value without getting lost in endless planning cycles.",
   },
 ];
 
@@ -376,10 +476,40 @@ export const solutions: Solution[] = [
 ];
 
 export const projects = [
-  { title: "Logistics Dashboard",   category: "Web App",   image: "/logistics-dashboard.png", text: "Real-time fleet and delivery tracking platform." },
-  { title: "Retail CRM Suite",      category: "CRM",       image: "/retail-crm.png",           text: "End-to-end lead and customer management system." },
-  { title: "Booking Platform",      category: "Web App",   image: "/booking-platform.png",     text: "Multi-vendor appointment and payment system." },
-  { title: "Inventory System",      category: "Software",  image: "/inventory-system.png",     text: "Warehouse and stock management for a retail chain." },
-  { title: "Brand Growth Campaign", category: "Marketing", image: "/brand-growth.png",         text: "SEO + paid campaign that tripled organic traffic." },
-  { title: "School ERP",            category: "Software",  image: "/school-erp.png",           text: "Student, staff, and finance management portal." },
+  {
+    title: "Logistics Dashboard",
+    category: "Web App",
+    image: "/logistics-dashboard.png",
+    text: "Real-time fleet and delivery tracking platform.",
+  },
+  {
+    title: "Retail CRM Suite",
+    category: "CRM",
+    image: "/retail-crm.png",
+    text: "End-to-end lead and customer management system.",
+  },
+  {
+    title: "Booking Platform",
+    category: "Web App",
+    image: "/booking-platform.png",
+    text: "Multi-vendor appointment and payment system.",
+  },
+  {
+    title: "Inventory System",
+    category: "Software",
+    image: "/inventory-system.png",
+    text: "Warehouse and stock management for a retail chain.",
+  },
+  {
+    title: "Brand Growth Campaign",
+    category: "Marketing",
+    image: "/brand-growth.png",
+    text: "SEO + paid campaign that tripled organic traffic.",
+  },
+  {
+    title: "School ERP",
+    category: "Software",
+    image: "/school-erp.png",
+    text: "Student, staff, and finance management portal.",
+  },
 ];
