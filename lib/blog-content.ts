@@ -1,18 +1,84 @@
-export type BlogSection = { heading?: string; body: string };
+export type BlogSection = {
+  heading?: string;
+  body?: string;
+  image?: string; // optional inline image path (photo in the middle of the article)
+  imageCaption?: string; // optional caption under inline image
+};
+
+export type BlogAuthor = {
+  name: string;
+  role: string; // e.g. "Writer, Filmmaker & Child Psychologist"
+  initial: string; // fallback letter if photo missing, e.g. "H"
+  photo: string; // intro/sidebar photo
+  bio: string[]; // "About <name>" paragraphs
+  gallery?: string[]; // additional photos shown in the bio block
+};
 
 export type BlogFullContent = {
   category: string;
   readTime: string;
   excerpt: string;
   sections: BlogSection[];
+  author?: BlogAuthor; // present only for guest posts
 };
 
 export const blogContent: Record<string, BlogFullContent> = {
+  "shikzya-learnhub-better-education": {
+    category: "EdTech",
+    readTime: "5 min read",
+    excerpt:
+      "Guest perspective by child psychologist Himal Neupane: why LearnHub's awareness and life-skills education — anti-bullying, cyber safety, disaster preparedness — makes ShikZya a forward-thinking step for Nepal's schools.",
+    sections: [
+      {
+        body: "Throughout my journey as a child psychologist and education advocate, I have always believed that true education extends far beyond textbooks and examinations. A child's development is shaped not only by academic knowledge but also by awareness, life skills, emotional well-being, and the ability to make informed decisions in everyday life. This is why initiatives like ShikZya deserve recognition.",
+      },
+      {
+        heading: "More Than a Digital Platform",
+        body: "ShikZya is not simply a digital education platform. It is a vision to strengthen the relationship between students, parents, teachers, and schools through technology that is practical, accessible, and built around the real needs of modern education. What particularly impressed me is LearnHub, a dedicated awareness and life-skills learning initiative within ShikZya.",
+      },
+      {
+        heading: "Solving a Real Problem in Schools",
+        body: "In many schools, teachers already carry significant academic responsibilities, making it difficult to consistently deliver structured awareness programs on topics that are equally important for a child's future. LearnHub addresses this challenge in a thoughtful and practical way. Through carefully curated educational videos and interactive quizzes, students gain knowledge that goes beyond the classroom. They learn about anti-bullying, cyber safety, earthquake preparedness, fire safety, road safety, first aid, mental health awareness, and other essential life skills that every young person should understand.",
+      },
+      {
+        imageCaption:
+          "LearnHub brings awareness and life-skills education directly to students.",
+      },
+      {
+        heading: "Why This Matters for Nepal",
+        body: "For a country like Nepal, where disaster preparedness and community awareness are especially important, such initiatives can make a meaningful difference in creating safer, more informed, and more responsible generations. What makes LearnHub even more valuable is that schools are not expected to create this content themselves. The platform provides a centralized and professionally curated content library, regularly updated with new topics and educational resources, allowing institutions to focus on teaching while ensuring students receive consistent, high-quality awareness education.",
+      },
+      {
+        heading: "Engaging, Interactive, and Accessible",
+        body: "For students, the experience is engaging, interactive, and accessible anytime and anywhere. The inclusion of quizzes helps reinforce understanding, making learning both enjoyable and memorable. I believe education should prepare children not only to pass examinations but also to navigate life with confidence, empathy, responsibility, and awareness.",
+      },
+      {
+        imageCaption:
+          "Interactive quizzes help students retain essential life-skills knowledge.",
+      },
+      {
+        heading: "A Forward-Thinking Step",
+        body: "Technology alone cannot transform education, but when combined with the right vision and genuine concern for children's holistic development, it becomes a powerful force for positive change. In my view, ShikZya and LearnHub represent exactly that kind of forward-thinking initiative. They have the potential to bridge gaps between schools and families, make quality educational resources more accessible, and equip young minds with the practical knowledge they need to thrive in an ever-changing world.",
+      },
+    ],
+    author: {
+      name: "Himal Neupane",
+      role: "Writer, Filmmaker, Director & Child Psychologist",
+      initial: "H",
+      photo: "/himal-intro.jpeg",
+      bio: [
+        "Himal Neupane is a writer, filmmaker, director, and child psychologist dedicated to shaping a better future for children through education and guidance. Throughout his career, he has worked closely with schools and parents, providing counseling and strengthening the connection between families and educational institutions to support children's psychological and academic development.",
+        'He is also the creator of the 53-minute educational docu-drama "काँचो माटो (Kancho Mato)", reflecting his long-standing commitment to child welfare, educational awareness, and social impact. Through his work across psychology, filmmaking, and education, he continues to advocate for child-centered learning and meaningful innovations that empower future generations.',
+      ],
+      gallery: ["/kacho-mato.jpeg"],
+    },
+  },
 
   "shikzya-education-management-system": {
     category: "Product Launch",
     readTime: "7 min read",
-    excerpt: "ShikZya is coming — a fully integrated EMS built for Nepal's schools and colleges. From student enrollment to parent portals, fee management to result cards, ShikZya handles it all under one roof.",
+    excerpt:
+      "ShikZya is coming — a fully integrated EMS built for Nepal's schools and colleges. From student enrollment to parent portals, fee management to result cards, ShikZya handles it all under one roof.",
     sections: [
       {
         body: "Education in Nepal is evolving — but the administrative backbone of most schools and colleges hasn't kept up. Attendance is still tracked on paper registers. Fee receipts are handwritten. Parents find out about their child's performance only on report card day. Teachers spend valuable hours on tasks that should take minutes. Rahu Doom is changing this with ShikZya — an all-in-one Education Management System built specifically for Nepal's institutions.",
@@ -51,7 +117,8 @@ export const blogContent: Record<string, BlogFullContent> = {
   "global-seo-advanced-tags": {
     category: "SEO",
     readTime: "8 min read",
-    excerpt: "Local SEO gets you found in your city. Global SEO gets you found everywhere. Advanced tags — hreflang, schema, Open Graph, canonical — are what separate the websites that rank from the ones that don't.",
+    excerpt:
+      "Local SEO gets you found in your city. Global SEO gets you found everywhere. Advanced tags — hreflang, schema, Open Graph, canonical — are what separate the websites that rank from the ones that don't.",
     sections: [
       {
         body: "If your business is only targeting customers in Kathmandu, local SEO is enough. But the moment you want to reach clients in India, the US, or anywhere beyond your city, you need to think globally. Global SEO is a different game — it requires understanding how search engines interpret your content for different countries and languages, and using advanced HTML tags to communicate that context clearly.",
@@ -90,7 +157,8 @@ export const blogContent: Record<string, BlogFullContent> = {
   "why-team-collaboration-matters": {
     category: "Team",
     readTime: "6 min read",
-    excerpt: "Great software isn't built by lone geniuses — it's built by teams that communicate well, trust each other, and move together. Here's why collaboration is the most underrated competitive advantage.",
+    excerpt:
+      "Great software isn't built by lone geniuses — it's built by teams that communicate well, trust each other, and move together. Here's why collaboration is the most underrated competitive advantage.",
     sections: [
       {
         body: "The myth of the lone genius programmer — working through the night, solving problems solo, shipping products from a bedroom — makes for a good movie. But it doesn't reflect how great technology actually gets built. The best products in the world — from iPhone to Figma to WhatsApp — were built by teams. Not just groups of people, but genuinely collaborative teams. The difference matters more than most business owners realize.",
@@ -121,7 +189,8 @@ export const blogContent: Record<string, BlogFullContent> = {
   "software-development-agility": {
     category: "Software",
     readTime: "4 min read",
-    excerpt: "Agile isn't just a buzzword — it's how modern software teams ship faster, adapt quickly, and deliver real value without getting lost in endless planning cycles.",
+    excerpt:
+      "Agile isn't just a buzzword — it's how modern software teams ship faster, adapt quickly, and deliver real value without getting lost in endless planning cycles.",
     sections: [
       {
         body: "In the world of software development, speed and adaptability are everything. Businesses that wait 18 months for a finished product often find the market has moved on by the time it launches. Agile development was born out of this problem — and today, it's the backbone of how the best software teams in the world operate.",
@@ -148,7 +217,8 @@ export const blogContent: Record<string, BlogFullContent> = {
   "ux-ui-designing-future-web": {
     category: "Design",
     readTime: "5 min read",
-    excerpt: "Good design is invisible — great design converts. Here's how thoughtful UX/UI decisions turn visitors into customers.",
+    excerpt:
+      "Good design is invisible — great design converts. Here's how thoughtful UX/UI decisions turn visitors into customers.",
     sections: [
       {
         body: "A website that looks beautiful but confuses visitors is a liability, not an asset. The difference between a site that generates leads and one that doesn't often comes down to decisions made at the design stage — decisions most people never consciously notice.",
@@ -175,7 +245,8 @@ export const blogContent: Record<string, BlogFullContent> = {
   "pioneering-contactless-payment": {
     category: "Fintech",
     readTime: "5 min read",
-    excerpt: "From QR codes to NFC — contactless payments are reshaping how businesses in Nepal collect money and how customers expect to pay.",
+    excerpt:
+      "From QR codes to NFC — contactless payments are reshaping how businesses in Nepal collect money and how customers expect to pay.",
     sections: [
       {
         body: "The way Nepal pays is changing. Walk into any modern restaurant, retail store, or service provider in Kathmandu today and you'll see QR codes at the counter. This shift from cash to contactless didn't happen overnight — and for businesses still operating on cash-only models, the window to adapt is narrowing.",
@@ -202,7 +273,8 @@ export const blogContent: Record<string, BlogFullContent> = {
   "why-digital-marketing-matters": {
     category: "Marketing",
     readTime: "6 min read",
-    excerpt: "Your customers are online — your marketing should be too. Here's why digital marketing is no longer optional for businesses in Nepal and beyond.",
+    excerpt:
+      "Your customers are online — your marketing should be too. Here's why digital marketing is no longer optional for businesses in Nepal and beyond.",
     sections: [
       {
         body: "Ten years ago, a business in Kathmandu could survive on word of mouth, a signboard, and FM radio ads. Today, that same business's potential customers are spending 4–6 hours a day on their phones — scrolling Facebook, watching YouTube, searching Google. If your business isn't visible in those spaces, you're invisible to a massive slice of your market.",
@@ -233,7 +305,8 @@ export const blogContent: Record<string, BlogFullContent> = {
   "how-local-seo-works": {
     category: "SEO",
     readTime: "7 min read",
-    excerpt: "When someone in Kathmandu searches 'best restaurant near me' — will your business show up? Local SEO decides that. Here's how it works.",
+    excerpt:
+      "When someone in Kathmandu searches 'best restaurant near me' — will your business show up? Local SEO decides that. Here's how it works.",
     sections: [
       {
         body: "Imagine a potential customer picks up their phone and types 'web development company in Kathmandu' into Google. Three businesses appear at the top with their ratings, address, and phone number. The rest are buried. Which business gets the call? Almost always one of those three. That's the power of Local SEO — and it's something every Nepal-based business should be actively investing in.",
@@ -268,7 +341,8 @@ export const blogContent: Record<string, BlogFullContent> = {
   "modernizing-education-technology": {
     category: "EdTech",
     readTime: "6 min read",
-    excerpt: "Attendance registers, manual fee receipts, and paper report cards — Nepal's schools deserve better. Here's how modern EMS platforms are changing that.",
+    excerpt:
+      "Attendance registers, manual fee receipts, and paper report cards — Nepal's schools deserve better. Here's how modern EMS platforms are changing that.",
     sections: [
       {
         body: "Walk into most schools across Nepal today and you'll find teachers maintaining handwritten attendance registers, administrative staff buried in paper fee receipts, and principals with no real-time visibility into what's happening across their institution. This isn't a resource problem — it's a technology adoption problem. And it's one that's entirely solvable.",
@@ -299,7 +373,8 @@ export const blogContent: Record<string, BlogFullContent> = {
   "restaurant-erp-solutions": {
     category: "Software",
     readTime: "7 min read",
-    excerpt: "Food waste, billing errors, staff scheduling chaos — restaurants face the same problems daily. A custom ERP system eliminates them all in one go.",
+    excerpt:
+      "Food waste, billing errors, staff scheduling chaos — restaurants face the same problems daily. A custom ERP system eliminates them all in one go.",
     sections: [
       {
         body: "Running a restaurant is one of the hardest businesses in the world. Thin margins, high staff turnover, perishable inventory, demanding customers, and relentless competition — all at the same time. Most restaurant owners in Nepal manage this complexity through a combination of memory, WhatsApp groups, and handwritten notebooks. It works until it doesn't — and when it stops working, it's usually expensive.",
@@ -330,7 +405,8 @@ export const blogContent: Record<string, BlogFullContent> = {
   "nepal-data-center-future": {
     category: "Infrastructure",
     readTime: "8 min read",
-    excerpt: "Nepal's digital data is hosted on servers in India, Singapore, and the US. A 100,000 TB data center in Kathmandu could change everything — for sovereignty, speed, and the economy.",
+    excerpt:
+      "Nepal's digital data is hosted on servers in India, Singapore, and the US. A 100,000 TB data center in Kathmandu could change everything — for sovereignty, speed, and the economy.",
     sections: [
       {
         body: "Every time a Nepali citizen opens their banking app, streams a video, uses a government portal, or sends an email — that data travels thousands of kilometers to servers sitting in India, Singapore, or the United States. It travels abroad, is processed abroad, and is stored abroad. For a country increasingly dependent on digital infrastructure, this isn't just an inconvenience — it's a strategic vulnerability.",
@@ -365,5 +441,4 @@ export const blogContent: Record<string, BlogFullContent> = {
       },
     ],
   },
-
 };

@@ -272,6 +272,8 @@ export type BlogPost = {
   day: string;
   month: string;
   title: string;
+  author: string;
+  authorRole: string;
   comments: number;
   category: string;
   readTime: string;
@@ -280,7 +282,24 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "shikzya-learnhub-better-education",
+    author: "Himal Neupane",
+    authorRole: "Writer, Filmmaker, Director & Child Psychologist",
+    image: "/shikzya-cover.png",
+    day: "12",
+    month: "Jun",
+    title:
+      "Why ShikZya and LearnHub Represent a Meaningful Step Towards Better Education",
+    comments: 0,
+    category: "EdTech",
+    readTime: "5 min read",
+    excerpt:
+      "Guest perspective by child psychologist Himal Neupane: why LearnHub's awareness and life-skills education — anti-bullying, cyber safety, disaster preparedness — makes ShikZya a forward-thinking step for Nepal's schools.",
+  },
+  {
     slug: "nepal-data-center-future",
+    author: "Sunil Sharma",
+    authorRole: "Co-Founder, Rahu Doom Pvt Ltd",
     image: "/Data-Center.png",
     day: "01",
     month: "Jun",
@@ -294,6 +313,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "shikzya-education-management-system",
+    author: "Sunil Sharma",
+    authorRole: "Co-Founder, Rahu Doom Pvt Ltd",
     image: "/ShikZya.png",
     day: "31",
     month: "May",
@@ -307,6 +328,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "global-seo-advanced-tags",
+    author: "Sunil Sharma",
+    authorRole: "Co-Founder, Rahu Doom Pvt Ltd",
     image: "/blog-7.png",
     day: "28",
     month: "May",
@@ -319,6 +342,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "why-team-collaboration-matters",
+    author: "Sunil Sharma",
+    authorRole: "Co-Founder, Rahu Doom Pvt Ltd",
     image: "/blog-3.png",
     day: "26",
     month: "May",
@@ -332,6 +357,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "restaurant-erp-solutions",
+    author: "Sunil Sharma",
+    authorRole: "Co-Founder, Rahu Doom Pvt Ltd",
     image: "/blog-10.png",
     day: "12",
     month: "May",
@@ -344,6 +371,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "modernizing-education-technology",
+    author: "Sunil Sharma",
+    authorRole: "Co-Founder, Rahu Doom Pvt Ltd",
     image: "/blog-9.png",
     day: "05",
     month: "May",
@@ -357,6 +386,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "how-local-seo-works",
+    author: "Sunil Sharma",
+    authorRole: "Co-Founder, Rahu Doom Pvt Ltd",
     image: "/blog-8.png",
     day: "25",
     month: "Apr",
@@ -369,6 +400,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "why-digital-marketing-matters",
+    author: "Sunil Sharma",
+    authorRole: "Co-Founder, Rahu Doom Pvt Ltd",
     image: "/blog-4.png",
     day: "18",
     month: "Apr",
@@ -381,6 +414,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "pioneering-contactless-payment",
+    author: "Sunil Sharma",
+    authorRole: "Co-Founder, Rahu Doom Pvt Ltd",
     image: "/blog-6.png",
     day: "13",
     month: "Mar",
@@ -393,6 +428,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "ux-ui-designing-future-web",
+    author: "Sunil Sharma",
+    authorRole: "Co-Founder, Rahu Doom Pvt Ltd",
     image: "/blog-2.png",
     day: "12",
     month: "Mar",
@@ -405,6 +442,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "software-development-agility",
+    author: "Sunil Sharma",
+    authorRole: "Co-Founder, Rahu Doom Pvt Ltd",
     image: "/blog-1.png",
     day: "10",
     month: "Mar",

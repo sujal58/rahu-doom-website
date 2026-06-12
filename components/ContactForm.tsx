@@ -4,9 +4,14 @@ import { useState } from "react";
 import { Send, CheckCircle2 } from "lucide-react";
 import { services } from "@/lib/data";
 
-
 export default function ContactForm() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", service: "", message: "" });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
+  });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
@@ -17,8 +22,10 @@ export default function ContactForm() {
   const validate = () => {
     const e: Record<string, string> = {};
     if (!form.name.trim()) e.name = "Please enter your name.";
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = "Enter a valid email.";
-    if (!form.message.trim()) e.message = "Tell us a little about your project.";
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
+      e.email = "Enter a valid email.";
+    if (!form.message.trim())
+      e.message = "Tell us a little about your project.";
     setErrors(e);
     return Object.keys(e).length === 0;
   };
@@ -60,14 +67,15 @@ export default function ContactForm() {
         <CheckCircle2 size={44} className="text-brand" />
         <h3 className="mt-4 text-xl font-bold">Thank you!</h3>
         <p className="mt-2 text-white/60">
-          We&apos;ve received your message and will get back to you within one business day.
+          We&apos;ve received your message and will get back to you within one
+          business day.
         </p>
       </div>
     );
   }
 
   const field =
-    "w-full rounded-lg border border-white/15 bg-white/[0.04] px-4 py-3 text-sm text-white outline-none transition-colors focus:border-brand";
+    "w-full rounded-lg border border-white/15 bg-white px-4 py-3 text-sm text-black outline-none transition-colors focus:border-brand";
 
   return (
     <form onSubmit={submit} className="space-y-4">
@@ -79,7 +87,9 @@ export default function ContactForm() {
             value={form.name}
             onChange={(e) => update("name", e.target.value)}
           />
-          {errors.name && <p className="mt-1 text-xs text-brand">{errors.name}</p>}
+          {errors.name && (
+            <p className="mt-1 text-xs text-brand">{errors.name}</p>
+          )}
         </div>
         <div>
           <input
@@ -88,7 +98,9 @@ export default function ContactForm() {
             value={form.email}
             onChange={(e) => update("email", e.target.value)}
           />
-          {errors.email && <p className="mt-1 text-xs text-brand">{errors.email}</p>}
+          {errors.email && (
+            <p className="mt-1 text-xs text-brand">{errors.email}</p>
+          )}
         </div>
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
@@ -103,9 +115,11 @@ export default function ContactForm() {
           value={form.service}
           onChange={(e) => update("service", e.target.value)}
         >
-          <option value="">Service you&apos;re interested in</option>
+          <option value="" className="bg-white/[0.04]">
+            Service you&apos;re interested in
+          </option>
           {services.map((s) => (
-            <option key={s.slug} value={s.title}>
+            <option key={s.slug} value={s.title} className="bg-white/[0.04]">
               {s.title}
             </option>
           ))}
@@ -118,7 +132,9 @@ export default function ContactForm() {
           value={form.message}
           onChange={(e) => update("message", e.target.value)}
         />
-        {errors.message && <p className="mt-1 text-xs text-brand">{errors.message}</p>}
+        {errors.message && (
+          <p className="mt-1 text-xs text-brand">{errors.message}</p>
+        )}
       </div>
       <button
         type="submit"
