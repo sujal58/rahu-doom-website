@@ -35,6 +35,11 @@ export const metadata: Metadata = {
     "digital marketing Nepal",
     "software development company",
   ],
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     title: `${company.name}`,
     description:
