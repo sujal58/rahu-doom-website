@@ -7,11 +7,11 @@ export type BlogSection = {
 
 export type BlogAuthor = {
   name: string;
-  role: string; // e.g. "Writer, Filmmaker & Child Psychologist"
-  initial: string; // fallback letter if photo missing, e.g. "H"
-  photo: string; // intro/sidebar photo
+  role: string;
+  initial: string;
+  photo: string;
   bio: string[]; // "About <name>" paragraphs
-  gallery?: string[]; // additional photos shown in the bio block
+  gallery?: string[];
 };
 
 export type BlogFullContent = {
